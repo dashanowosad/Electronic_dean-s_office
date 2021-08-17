@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{B0547B26-6B96-4105-8FC7-06A588CD942B}</ProjectGuid>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>Diploma_v2</RootNamespace>
+        <AssemblyName>Diploma_v2</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <WarningLevel>4</WarningLevel>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+          <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+          <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
+          <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Windows.Forms" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Xaml">
+            <RequiredTargetFramework>4.0</RequiredTargetFramework>
+        </Reference>
+        <Reference Include="WindowsBase" />
+        <Reference Include="PresentationCore" />
+        <Reference Include="PresentationFramework" />
+    </ItemGroup>
+    <ItemGroup>
+        <ApplicationDefinition Include="App.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <SubType>Designer</SubType>
+        </ApplicationDefinition>
+        <Compile Include="AboutComittee_Window.xaml.cs">
+          <DependentUpon>AboutComittee_Window.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="AboutOneComittee_Window.xaml.cs">
+          <DependentUpon>AboutOneComittee_Window.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="AboutStudent.xaml.cs">
+          <DependentUpon>AboutStudent.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="AddDiscipline_Window.xaml.cs">
+          <DependentUpon>AddDiscipline_Window.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="AreYouShure_Window.xaml.cs">
+          <DependentUpon>AreYouShure_Window.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="ComboBoxFromReferenceExams.cs" />
+        <Compile Include="ComboBoxsFromReferenceAboutStudent.cs" />
+        <Compile Include="ComboBoxTeacherContent.cs" />
+        <Compile Include="DataBaseController.cs" />
+        <Compile Include="DB\ComitteeDB.cs" />
+        <Compile Include="DB\DisciplineDB.cs" />
+        <Compile Include="DB\FacultyDB.cs" />
+        <Compile Include="DB\FieldDB.cs" />
+        <Compile Include="DB\MarkDB.cs" />
+        <Compile Include="DB\RatingDB.cs" />
+        <Compile Include="DelDiscipline_Window.xaml.cs">
+          <DependentUpon>DelDiscipline_Window.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="DopWindow\AboutComittee\AboutComitteeClass_Window.cs" />
+        <Compile Include="DopWindow\AboutComittee\LoadComittee.cs" />
+        <Compile Include="DopWindow\DelDiscipline\DelDisciplineClass_Window.cs" />
+        <Compile Include="DopWindow\InfoAboutOneComittee\InfoAboutOneComittee_Window.cs" />
+        <Compile Include="DopWindow\Statistic\GetStatistic.cs" />
+        <Compile Include="DopWindow\Statistic\LoadComboBoxStatistic.cs" />
+        <Compile Include="DopWindow\Statistic\Statistic_Window.cs" />
+        <Compile Include="DopWindow\UpdateDiscipline\LoadComboBoxUpdateDiscipline.cs" />
+        <Compile Include="UpdateDiscipline_Window.xaml.cs">
+          <DependentUpon>UpdateDiscipline_Window.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="DisciplineAddOrUpdate_Window.xaml.cs">
+          <DependentUpon>DisciplineAddOrUpdate_Window.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Discipline_Window.xaml.cs">
+          <DependentUpon>Discipline_Window.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="DopWindow\AddDiscipline\AddDiscipline.cs" />
+        <Compile Include="DopWindow\AddDiscipline\AddDisciplineClass_Window.cs" />
+        <Compile Include="DopWindow\AreYouShure\Shure_Window.cs" />
+        <Compile Include="DopWindow\UpdateDiscipline\UpdateDisciplineClass_Window.cs" />
+        <Compile Include="DopWindow\DisciplineAndMarks\AddOrUpdateDisciplineAndMark.cs" />
+        <Compile Include="DopWindow\DisciplineAndMarks\DisciplineAndMarks_Window.cs" />
+        <Compile Include="DopWindow\DisciplineAndMarks\DisciplineWindowController.cs" />
+        <Compile Include="DopWindow\DisciplineAndMarks\LoadInfoDiscipline.cs" />
+        <Compile Include="DopWindow\Orders\AddOrUpdateOrder.cs" />
+        <Compile Include="DopWindow\Orders\LoadInfoOrder.cs" />
+        <Compile Include="DopWindow\Orders\OrderWindowController.cs" />
+        <Compile Include="DopWindow\Orders\Order_Window.cs" />
+        <Compile Include="DopWindow\Student\AddOrUpdateStudent.cs" />
+        <Compile Include="DopWindow\Student\LoadInfo.cs" />
+        <Compile Include="DopWindow\Student\Student_Window.cs" />
+        <Compile Include="DopWindow\Student\StudenWindowController.cs" />
+        <Compile Include="DopWindow\TeacherDisciplin\LoadDiscipline.cs" />
+        <Compile Include="DopWindow\TeacherDisciplin\TeacherDisciplineController.cs" />
+        <Compile Include="DopWindow\Teacher\AddOrUpdateTeacher.cs" />
+        <Compile Include="DopWindow\Teacher\LoadInfoTeacher.cs" />
+        <Compile Include="DopWindow\Teacher\TeacherWindowController.cs" />
+        <Compile Include="DopWindow\Teacher\Teacher_Window.cs" />
+        <Compile Include="OrderAddOrUpdate_Window.xaml.cs">
+          <DependentUpon>OrderAddOrUpdate_Window.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="References\ReferenceAboutStudent.cs" />
+        <Compile Include="References\References.cs" />
+        <Compile Include="References\ReferencesNumber13.cs" />
+        <Compile Include="StudentAddOrUpdate_Window.xaml.cs">
+          <DependentUpon>StudentAddOrUpdate_Window.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="TeacherAddOrUpdate_Window.xaml.cs">
+          <DependentUpon>TeacherAddOrUpdate_Window.xaml</DependentUpon>
+        </Compile>
+        <Page Include="AboutComittee_Window.xaml" />
+        <Page Include="AboutOneComittee_Window.xaml" />
+        <Page Include="AboutStudent.xaml" />
+        <Page Include="AddDiscipline_Window.xaml" />
+        <Page Include="AreYouShure_Window.xaml" />
+        <Page Include="DelDiscipline_Window.xaml" />
+        <Page Include="UpdateDiscipline_Window.xaml" />
+        <Page Include="DisciplineAddOrUpdate_Window.xaml" />
+        <Page Include="Discipline_Window.xaml" />
+        <Page Include="MainWindow.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <SubType>Designer</SubType>
+        </Page>
+        <Compile Include="App.xaml.cs">
+            <DependentUpon>App.xaml</DependentUpon>
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Include="DB\OrderDB.cs" />
+        <Compile Include="DB\StudentDB.cs" />
+        <Compile Include="DB\TeacherDB.cs" />
+        <Compile Include="FillAndWorkWithComittee.cs" />
+        <Compile Include="MainWindow.xaml.cs">
+            <DependentUpon>MainWindow.xaml</DependentUpon>
+            <SubType>Code</SubType>
+        </Compile>
+        <Page Include="OrderAddOrUpdate_Window.xaml" />
+        <Page Include="StudentAddOrUpdate_Window.xaml" />
+        <Page Include="TeacherAddOrUpdate_Window.xaml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Properties\AssemblyInfo.cs">
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Include="Properties\Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DesignTime>True</DesignTime>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="App.config" />
+        <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="src" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

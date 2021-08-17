@@ -1,0 +1,25 @@
+﻿<Window x:Class="Diploma_v2.Discipline_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Diploma_v2"
+        mc:Ignorable="d"
+        Title="Discipline_Window" Height="450" Width="400" Loaded="LoadInfoDiscipline">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <ScrollViewer Grid.Row="0" Grid.RowSpan="4" Margin="0 10 0 -30">
+            <StackPanel x:Name="StackPanel"/>
+        </ScrollViewer>
+        <StackPanel Grid.Row="4" Margin="0 40 0 0">
+            <Button Content="Применить" FontSize="14" HorizontalAlignment="Center" Height="30" Width="100" Click="SaveDisciplines"/>
+        </StackPanel>
+    </Grid>
+</Window>
